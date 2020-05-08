@@ -1,0 +1,8 @@
+- b'FakerJS-Github-Repo'
+- b'https://github.com/marak/Faker.js/'
+- b'MySQL-Node-Package-Github-Repo'
+- b'https://github.com/mysqljs/mysql'
+- b'Slides'
+- b'http://webdev.slides.com/coltsteele/mysql-105#/37'
+- b'Slides-For-This-Section'
+- b'http://webdev.slides.com/coltsteele/mysql-105#/'

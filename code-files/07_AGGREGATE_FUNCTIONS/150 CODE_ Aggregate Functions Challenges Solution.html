@@ -1,0 +1,49 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>150 CODE_ Aggregate Functions Challenges Solution</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT COUNT(*) FROM books;
+
+SELECT COUNT(*) FROM books GROUP BY released_year;
+
+SELECT released_year, COUNT(*) FROM books GROUP BY released_year;
+
+SELECT Sum(stock_quantity) FROM BOOKS;
+
+SELECT AVG(released_year) FROM books GROUP BY author_lname, author_fname;
+
+SELECT author_fname, author_lname, AVG(released_year) FROM books GROUP BY author_lname, author_fname;
+
+SELECT CONCAT(author_fname, ' ', author_lname) FROM books
+WHERE pages = (SELECT Max(pages) FROM books);
+
+SELECT CONCAT(author_fname, ' ', author_lname) FROM books
+ORDER BY pages DESC LIMIT 1;
+
+SELECT pages, CONCAT(author_fname, ' ', author_lname) FROM books
+ORDER BY pages DESC;
+
+SELECT released_year AS year,
+    COUNT(*) AS '# of books',
+    AVG(pages) AS 'avg pages'
+FROM books
+    GROUP BY released_year;
+</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

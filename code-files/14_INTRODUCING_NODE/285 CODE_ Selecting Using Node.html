@@ -1,0 +1,92 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>285 CODE_ Selecting Using Node</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p><strong>Insert users (from command line):</strong></p>
+
+<pre class="prettyprint linenums">INSERT INTO users (email) VALUES('Katie34@yahoo.com'), ('Tunde@gmail.com');
+</pre>
+
+
+
+
+
+
+
+
+
+<p><strong>Check that users are added:</strong></p>
+
+
+
+<pre class="prettyprint linenums">SELECT * FROM users;<br></pre>
+
+
+
+
+
+<p><strong>To SELECTall users from database:</strong></p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">var q = 'SELECT * FROM users ';
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+});</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>To count the number of users in the database:<br></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">var q = 'SELECT COUNT(*) AS total FROM users ';
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results[0].total);
+});</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

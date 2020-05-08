@@ -1,0 +1,118 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>281 CODE_ Connecting Node to MySQL</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p><strong></strong>Documentation for the MySQL Node Package:</p>
+
+<h4>Step 1: Install the MySQLNode Package</h4>
+
+
+
+
+
+
+
+
+
+<p><code>npm install mysql</code></p>
+
+
+
+
+
+
+
+<h4>Step 2: Connect to Database</h4>
+
+
+
+
+
+<pre class="prettyprint linenums">var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'learnwithcolt',  //your username
+  database : 'join_us'         //the name of your db
+});</pre>
+
+
+
+
+
+
+
+
+
+
+
+<h4>Step 3: Run Queries</h4>
+
+
+
+
+
+<p><strong>Running a super simple SQLquery like:<br></strong></p>
+
+<p><code>SELECT 1 + 1;</code><br></p><p><strong>Using the MySQLNode Package:<br></strong></p>
+
+<pre class="prettyprint linenums">connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+   if (error) throw error;
+   console.log('The solution is: ', results[0].solution);
+});</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Another sample query, this time selecting 3 things:<br></strong></p>
+
+
+
+<pre class="prettyprint linenums">var q = 'SELECT CURTIME() as time, CURDATE() as date, NOW() as now';
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results[0].time);
+  console.log(results[0].date);
+  console.log(results[0].now);
+});</pre>
+
+
+
+
+
+
+
+<p>The equivalent SQL query:</p><pre class="prettyprint linenums">SELECT CURTIME() as time, CURDATE() as date, NOW() as now;</pre><p><br></p>
+
+
+
+<p><br><br></p>
+
+
+
+<p><br></p>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

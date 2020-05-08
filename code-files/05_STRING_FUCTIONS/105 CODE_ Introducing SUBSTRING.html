@@ -1,0 +1,61 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>105 CODE_ Introducing SUBSTRING</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT SUBSTRING('Hello World', 1, 4);
+
+SELECT SUBSTRING('Hello World', 7);
+
+SELECT SUBSTRING('Hello World', 3, 8);
+
+SELECT SUBSTRING('Hello World', 3);
+
+SELECT SUBSTRING('Hello World', -3);
+
+SELECT SUBSTRING('Hello World', -7);
+
+SELECT title FROM books;
+
+SELECT SUBSTRING("Where I'm Calling From: Selected Stories", 1, 10);
+
+SELECT SUBSTRING(title, 1, 10) FROM books;
+
+SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+
+SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
+
+SELECT CONCAT
+(
+SUBSTRING(title, 1, 10),
+'...'
+)
+FROM books;
+
+source book_code.sql
+
+SELECT CONCAT
+(
+SUBSTRING(title, 1, 10),
+'...'
+) AS 'short title'
+FROM books;
+
+source book_code.sql</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

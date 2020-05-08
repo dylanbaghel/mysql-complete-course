@@ -1,0 +1,50 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>132 CODE_ Refining Selections Exercises Solution</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT title FROM books WHERE title LIKE '%stories%';
+
+SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
+
+SELECT 
+    CONCAT(title, ' - ', released_year) AS summary 
+FROM books ORDER BY released_year DESC LIMIT 3;
+
+SELECT title, author_lname FROM books WHERE author_lname LIKE '% %';
+
+SELECT title, released_year, stock_quantity 
+FROM books ORDER BY stock_quantity LIMIT 3;
+
+SELECT title, author_lname 
+FROM books ORDER BY author_lname, title;
+
+SELECT title, author_lname 
+FROM books ORDER BY 2,1;
+
+SELECT
+    CONCAT(
+        'MY FAVORITE AUTHOR IS ',
+        UPPER(author_fname),
+        ' ',
+        UPPER(author_lname),
+        '!'
+    ) AS yell
+FROM books ORDER BY author_lname;</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

@@ -1,0 +1,53 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>166 CODE_ Formatting Dates</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT name, birthdate FROM people;
+
+SELECT name, DAY(birthdate) FROM people;
+
+SELECT name, birthdate, DAY(birthdate) FROM people;
+
+SELECT name, birthdate, DAYNAME(birthdate) FROM people;
+
+SELECT name, birthdate, DAYOFWEEK(birthdate) FROM people;
+
+SELECT name, birthdate, DAYOFYEAR(birthdate) FROM people;
+
+SELECT name, birthtime, DAYOFYEAR(birthtime) FROM people;
+
+SELECT name, birthdt, DAYOFYEAR(birthdt) FROM people;
+
+SELECT name, birthdt, MONTH(birthdt) FROM people;
+
+SELECT name, birthdt, MONTHNAME(birthdt) FROM people;
+
+SELECT name, birthtime, HOUR(birthtime) FROM people;
+
+SELECT name, birthtime, MINUTE(birthtime) FROM people;
+
+SELECT CONCAT(MONTHNAME(birthdate), ' ', DAY(birthdate), ' ', YEAR(birthdate)) FROM people;
+
+SELECT DATE_FORMAT(birthdt, 'Was born on a %W') FROM people;
+
+SELECT DATE_FORMAT(birthdt, '%m/%d/%Y') FROM people;
+
+SELECT DATE_FORMAT(birthdt, '%m/%d/%Y at %h:%i') FROM people;</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

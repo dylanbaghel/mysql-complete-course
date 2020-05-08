@@ -1,0 +1,60 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>123 CODE_ Sorting Data with ORDER BY</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT author_lname FROM books;
+
+SELECT author_lname FROM books ORDER BY author_lname;
+
+SELECT title FROM books;
+
+SELECT title FROM books ORDER BY title;
+SELECT author_lname FROM books ORDER BY author_lname DESC;
+
+SELECT released_year FROM books;
+
+SELECT released_year FROM books ORDER BY released_year;
+
+SELECT released_year FROM books ORDER BY released_year DESC;
+
+SELECT released_year FROM books ORDER BY released_year ASC;
+
+SELECT title, released_year, pages FROM books ORDER BY released_year;
+
+SELECT title, pages FROM books ORDER BY released_year;
+
+SELECT title, author_fname, author_lname 
+FROM books ORDER BY 2;
+
+SELECT title, author_fname, author_lname 
+FROM books ORDER BY 3;
+
+SELECT title, author_fname, author_lname 
+FROM books ORDER BY 1;
+
+SELECT title, author_fname, author_lname 
+FROM books ORDER BY 1 DESC;
+
+SELECT author_lname, title
+FROM books ORDER BY 2;
+
+SELECT author_fname, author_lname FROM books 
+ORDER BY author_lname, author_fname;</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

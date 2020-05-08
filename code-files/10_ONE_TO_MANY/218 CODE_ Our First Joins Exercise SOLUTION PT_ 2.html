@@ -1,0 +1,178 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>218 CODE_ Our First Joins Exercise SOLUTION PT_ 2</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p><strong>-- EXERCISE 1</strong></p>
+
+<pre class="prettyprint linenums">SELECT first_name, title, grade
+FROM students
+INNER JOIN papers
+    ON students.id = papers.student_id
+ORDER BY grade DESC;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- ALT SOLUTION</strong></p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT first_name, title, grade
+FROM students
+RIGHT JOIN papers
+    ON students.id = papers.student_id
+ORDER BY grade DESC;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- PROBLEM 2</strong></p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT first_name, title, grade
+FROM students
+LEFT JOIN papers
+    ON students.id = papers.student_id;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- PROBLEM 3</strong></p>
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT
+    first_name,
+    IFNULL(title, 'MISSING'),
+    IFNULL(grade, 0)
+FROM students
+LEFT JOIN papers
+    ON students.id = papers.student_id;</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p> <br><strong>-- PROBLEM 4</strong></p>
+
+
+
+<pre class="prettyprint linenums">SELECT
+    first_name,
+    IFNULL(AVG(grade), 0) AS average
+FROM students
+LEFT JOIN papers
+    ON students.id = papers.student_id
+GROUP BY students.id
+ORDER BY average DESC;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- PROBLEM 5</strong></p>
+
+<pre class="prettyprint linenums">SELECT first_name, 
+       Ifnull(Avg(grade), 0) AS average, 
+       CASE 
+         WHEN Avg(grade) IS NULL THEN 'FAILING' 
+         WHEN Avg(grade) &gt;= 75 THEN 'PASSING' 
+         ELSE 'FAILING' 
+       end                   AS passing_status 
+FROM   students 
+       LEFT JOIN papers 
+              ON students.id = papers.student_id 
+GROUP  BY students.id 
+ORDER  BY average DESC;</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

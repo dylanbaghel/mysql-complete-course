@@ -1,0 +1,227 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>057 CODE_ Setting Default Values</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <h4>CODE:Setting Default Values</h4>
+
+<p>Define a table with a DEFAULT name specified:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">CREATE TABLE cats3
+  (
+    name VARCHAR(20) DEFAULT 'no name provided',
+    age INT DEFAULT 99
+  );</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Notice the change when you describe the table:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>DESC cats3;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Insert a cat without a name:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>INSERT INTO cats3(age) VALUES(13);</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Or a nameless, ageless cat:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>INSERT INTO cats3() VALUES();</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Combine NOT NULL and DEFAULT:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">CREATE TABLE cats4
+  (
+    name VARCHAR(20) NOT NULL DEFAULT unnamed,
+    age INT NOT NULL DEFAULT 99
+  );</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p><br>Notice The Difference:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">INSERT INTO cats() VALUES();
+
+SELECT * FROM cats;
+
+INSERT INTO cats3() VALUES();
+
+SELECT * FROM cats3;
+
+INSERT INTO cats3(name, age) VALUES('Montana', NULL);
+
+SELECT * FROM cats3;
+
+INSERT INTO cats4(name, age) VALUES('Cali', NULL);</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

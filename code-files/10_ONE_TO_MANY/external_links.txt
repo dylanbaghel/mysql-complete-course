@@ -1,0 +1,4 @@
+- b'Slides'
+- b'http://webdev.slides.com/coltsteele/mysql-99-104#/28'
+- b'Slides-For-This-Section'
+- b'http://webdev.slides.com/coltsteele/mysql-99-104#/'

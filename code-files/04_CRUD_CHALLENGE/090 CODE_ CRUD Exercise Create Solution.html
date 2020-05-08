@@ -1,0 +1,58 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>090 CODE_ CRUD Exercise Create Solution</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT database();
+
+CREATE DATABASE shirts_db;
+
+use shirts_db;
+
+SELECT database();
+
+CREATE TABLE shirts
+  (
+    shirt_id INT NOT NULL AUTO_INCREMENT,
+    article VARCHAR(100),
+    color VARCHAR(100),
+    shirt_size VARCHAR(100),
+    last_worn INT,
+    PRIMARY KEY(shirt_id)
+  );
+
+DESC shirts;
+
+INSERT INTO shirts(article, color, shirt_size, last_worn) VALUES
+('t-shirt', 'white', 'S', 10),
+('t-shirt', 'green', 'S', 200),
+('polo shirt', 'black', 'M', 10),
+('tank top', 'blue', 'S', 50),
+('t-shirt', 'pink', 'S', 0),
+('polo shirt', 'red', 'M', 5),
+('tank top', 'white', 'S', 200),
+('tank top', 'blue', 'M', 15);
+
+SELECT * FROM shirts;
+
+INSERT INTO shirts(color, article, shirt_size, last_worn) 
+VALUES('purple', 'polo shirt', 'medium', 50);
+
+SELECT * FROM shirts;</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

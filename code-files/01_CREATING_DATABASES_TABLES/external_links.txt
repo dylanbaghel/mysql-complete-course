@@ -1,0 +1,4 @@
+- b'Slides'
+- b'http://webdev.slides.com/coltsteele/mysql-97-98?token=owYEcglY#/41'
+- b'Slides-For-This-Section-'
+- b'http://webdev.slides.com/coltsteele/mysql-97-98#/'

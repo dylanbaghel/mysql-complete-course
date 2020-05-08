@@ -1,0 +1,90 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>053 CODE_ MySQL Warnings</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <h4>MySQLWarnings Code</h4>
+
+<p><code>DESC cats;</code></p>
+
+
+
+
+
+
+
+
+
+<p>Try Inserting a cat with a super long name:</p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">INSERT INTO cats(name, age)
+VALUES('This is some text blah blah blah blah blah text text text something about cats lalalalal meowwwwwwwwwww', 10);</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Then view the warning:</p>
+
+
+
+
+
+<p><code>SHOW WARNINGS;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+<p>Try inserting a cat with incorrect data types:<br></p>
+
+
+
+<p><code>INSERT INTO cats(name, age) VALUES('Lima', 'dsfasdfdas');</code><br></p>
+
+<p>Then view the warning:<br></p>
+
+<p><code>SHOW WARNINGS;</code></p>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

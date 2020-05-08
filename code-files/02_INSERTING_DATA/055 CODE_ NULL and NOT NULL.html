@@ -1,0 +1,299 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>055 CODE_ NULL and NOT NULL</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <h4>NULLand NOTNULLCode</h4>
+
+<p>Try inserting a cat without an age:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>INSERT INTO cats(name) VALUES('Alabama');</code><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>SELECT * FROM cats;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Try inserting a nameless and ageless cat:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>INSERT INTO cats() VALUES();</code><br><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Define a new cats2 table with NOTNULLconstraints:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">CREATE TABLE cats2
+  (
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+  );</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>DESC cats2;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Now try inserting an ageless cat:</p>
+
+
+
+
+
+
+
+
+
+<p><code>INSERT INTO cats2(name) VALUES('Texas');</code><br></p>
+
+
+
+
+
+
+
+<p>View the new warnings:</p>
+
+
+
+
+
+
+
+<p><code>SHOW WARNINGS;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>SELECT * FROM cats2;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Do the same for a nameless cat:</p>
+
+
+
+<p><code>INSERT INTO cats2(age) VALUES(7);</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>SHOW WARNINGS;</code></p>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

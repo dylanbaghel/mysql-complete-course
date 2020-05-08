@@ -1,0 +1,4 @@
+- b'Exercise-Slides'
+- b'http://webdev.slides.com/coltsteele/mysql-97-98#/79'
+- b'Slides-For-This-Section'
+- b'http://webdev.slides.com/coltsteele/mysql-97-98#/43'

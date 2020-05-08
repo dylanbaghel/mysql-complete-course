@@ -1,0 +1,64 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>287 CODE_ Inserting Using Node</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <h4>Inserting Data Using Node</h4>
+
+<p><strong>Approach #1</strong></p>
+
+
+
+<pre class="prettyprint linenums">var q = 'INSERT INTO users (email) VALUES ("rusty_the_dog@gmail.com")';
+
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+});</pre>
+
+
+
+
+
+<p><strong><br></strong></p>
+
+<p><strong>An easier approach that allows for dynamic data</strong><br></p>
+
+
+
+<p><br></p>
+
+<pre class="prettyprint linenums">var person = {
+    email: faker.internet.email(),
+    created_at: faker.date.past()
+};
+
+var end_result = connection.query('INSERT INTO users SET ?', person, function(err, result) {
+  if (err) throw err;
+  console.log(result);
+});</pre>
+
+
+
+<p><br></p>
+
+
+
+<p><br></p>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>

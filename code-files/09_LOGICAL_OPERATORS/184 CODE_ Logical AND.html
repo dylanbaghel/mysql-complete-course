@@ -1,0 +1,52 @@
+<html>
+                        <head>
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                        <title>184 CODE_ Logical AND</title>
+                        </head>
+                        <body>
+                        <div class="container">
+                        <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">SELECT title, author_lname, released_year FROM books
+WHERE author_lname='Eggers';
+
+SELECT title, author_lname, released_year FROM books
+WHERE released_year &gt; 2010;
+
+SELECT  
+    title, 
+    author_lname, 
+    released_year FROM books
+WHERE author_lname='Eggers' 
+    AND released_year &gt; 2010;
+
+SELECT 1 &lt; 5 &amp;&amp; 7 = 9;
+-- false
+
+SELECT -10 &gt; -20 &amp;&amp; 0 &lt;= 0;
+-- true
+
+SELECT -40 &lt;= 0 AND 10 &gt; 40;
+--false
+
+SELECT 54 &lt;= 54 &amp;&amp; 'a' = 'A';
+-- true
+
+SELECT * 
+FROM books
+WHERE author_lname='Eggers' 
+    AND released_year &gt; 2010 
+    AND title LIKE '%novel%';</pre>
+        </div>
+    </div>
+</div>
+</p>
+                        </div>
+                        </div>
+                        </div>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                        </body>
+                        </html>
